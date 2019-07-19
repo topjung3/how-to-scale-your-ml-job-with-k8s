@@ -208,8 +208,8 @@ kubectl get node -L role
 # Create EFS filesystem
 FS_ID=$(aws efs create-file-system --creation-token $CLUSTER_NAME | jq -r .FileSystemId)
 
-# Manage file system access
-# AWS console
+# Manage file system access (VPC 설정 해줘야 하는듯.)
+# AWS console -> EFS -> File System 부분에서 
 
 # installing helm client
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
